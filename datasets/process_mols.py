@@ -276,6 +276,7 @@ def generate_conformer(mol):
         AllChem.MMFFOptimizeMolecule(mol, confId=0)
     # else:
     #    AllChem.MMFFOptimizeMolecule(mol_rdkit, confId=0)
+    AllChem.AssignAtomChiralTagsFromStructure(mol)
 
 def get_lig_graph_with_matching(mol_, complex_graph, popsize, maxiter, matching, keep_original, num_conformers, remove_hs):
     if matching:
